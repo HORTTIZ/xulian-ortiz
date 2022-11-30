@@ -4,6 +4,7 @@ const secondsSphere = document.getElementById('seconds-sphere');
 let btnIg = document.getElementById('iconIg');
 let btnYt = document.getElementById('iconYt');
 let btnSpty = document.getElementById('iconSpty');
+let btnNoise = document.getElementById('noise');
 
 const btnGym = document.getElementById("modeGym");
 const btnStudy = document.getElementById("modeStudy");
@@ -502,4 +503,30 @@ btnSpty.addEventListener('click', function (){
     window.open('https://open.spotify.com/playlist/0LIGbfzDIz1cOkDLm13Izm?si=c315297605c147eb', '_blank');
 });
 
+const noiseSong = document.getElementById('noiseSong');
+btnNoise.addEventListener('click', function () {
+    Swal.fire({
+        title: '<h1 font-size="20px">🎧</h1>',
+        text: 'El brown noise es un sonido envolvente que se mueve en graves frecuencias transmitiendo calma y concentración, ideal para estudiar.',
+        footer: 'Conoce más acerca del ruido marrón...<a href="https://35mm.es/ruido-marron/">aquí</a>',
+        showCancelButton: true,
+        confirmButtonColor: '#3085d6',
+        cancelButtonColor: '#fa5454',
+        confirmButtonText: '¡Quiero concentrarme!',
+        cancelButtonText: 'Cancelar',
+    }).then((result) => {
+        if (result.isConfirmed) {
+            setTimeout(function ruidoBrown() {
+                noiseSong.currentTime = 0;
+                noiseSong.volume = 1.0;
+                noiseSong.play();
+            }, 1000);
+        } else if (result.dismiss){
+            setTimeout(function volumen(){
+                noiseSong.pause();
+                noiseSong.currentTime = 0;
+            });
+        }
+    })
+});
 
