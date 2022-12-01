@@ -8,6 +8,14 @@
         <link rel="shortcut icon" type="image/jpg" href="https://raw.githubusercontent.com/yofreee/workout/main/beenanceYT-logoOficial(1).jpeg">
     </head>
     <body>
+        <section class="container-noise">
+            <div class="content-noise">
+                <img src="imgs/noise.png" alt="Icono noise" id="noise"/>
+                <audio id="noiseSong" loop>
+                    <source type="audio/mp3" src="sounds/noise.mp3">
+                </audio>
+            </div>
+        </section>
         <section class="container">
             <div class="circle">
                 
@@ -18,13 +26,19 @@
                 </div>
             </section>
             <section class="container-nav">
-                <div class="content-nav">
-                    <a href=""><h3></h3></a>
+                <div class="content-nav1" id="content-nav1">
+                    <h3 id="modo">Gym</h3>
                 </div>
-                <div class="content-nav">
-                    <a href=""><h3></h3></a>
+                <div class="content-nav2" id="content-nav2">
+                    <h3 id="modo2">Study</h3>
                 </div>
             </section>
+            <audio id="audioBell">
+                <source type="audio/mp3" src="sounds/bell.mp3">
+            </audio>
+            <audio id="audioTictac">
+                <source type="audio/mp3" src="sounds/tictac.mp3">
+            </audio>
             <section class="container-warmup">
                 <section class="container-warmup-blur">
                     <div class="circle">
@@ -37,19 +51,21 @@
                     <div id="seconds-sphere" class="seconds-sphere"></div>
 
                     <div class="content-warmup">
-                        <h2>Warm Up</h2>
+                        <h2>Focus</h2>
                     </div>
                 </section>
             </section>
             <hr>
             <div class="comunicacion">
-                <img src="https://cdn.icon-icons.com/icons2/2389/PNG/512/todoist_logo_icon_144800.png" alt="Icono TodoIst" id="iconIg" title="Organiza tu vida">
-                <img src="https://cdn-icons-png.flaticon.com/128/1384/1384044.png" alt="Icono Youtube" id="iconYt">
-               <img src="https://w7.pngwing.com/pngs/505/336/png-transparent-spotify-logo-streaming-media-youtube-play-now-button-logo-monochrome-internet.png" alt="icono Spotify" id="iconSpty" title="PlayList Oblivion2.3"/>
+                <img src="imgs/iconotodoist.png" alt="Icono TodoIst" id="iconIg" title="Organiza tu vida">
+                <img src="imgs/iconoyt.png" alt="Icono Youtube" id="iconYt">
+               <img src="imgs/iconospty.png" alt="icono Spotify" id="iconSpty" title="PlayList Oblivion2.3"/>
             </div>
         </section>
         <script charset="utf-8" src="js/script.js"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script src="js/sweetAlert.js"></script>
+        <script src="js/modeGym.js"></script>
+        <script src="js/modeStudy.js"></script>
     </body>
 </html>
